@@ -11,13 +11,14 @@ function ExploreMenu() {
          <div className="explore-menu-list">
             {menu_list.map((item,index)=>{
                 return(
-                    <div className="menu-list-item">
+                    <div className="explore-menu-list-item">
                         <img src={item.menu_image} alt="" />
-                        {item.menu_name}
+                       <p>{item.menu_name}</p> 
                     </div>
                 )
             })}
          </div>
+         <hr />
     </div>
   )
 }
