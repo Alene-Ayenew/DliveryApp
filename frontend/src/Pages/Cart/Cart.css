@@ -73,10 +73,18 @@
     padding-left: 10px;
 }
 .cart-promocode-input button{
-    width: max(10vw,15px);
+    width: max(10vw,150px);
     padding :12px 5px;
     background-color: black;
     border: none;
     color: white;
     border-radius: 4pxs;
+}
+@media(max-width:750px){
+    .cart-bottom{
+        flex-direction: column-reverse;
+    }
+    .cart-promocode{
+        justify-content: start;
+    }
 }
