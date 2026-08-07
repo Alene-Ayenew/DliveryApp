@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./PlaceOrder.css";
 import { StoreContext } from "../../context/storeContext";
 function PlaceOrder() {
-  const {getTotalCartAmount}=useContext(StoreContext)
+  const { getTotalCartAmount } = useContext(StoreContext);
   return (
     <form action="" className="place-order">
       <div className="place-order-left">
@@ -24,7 +24,7 @@ function PlaceOrder() {
         <input type="text" placeholder="Phone" />
       </div>
       <div className="place-order-right">
-                <div className="cart-total">
+        <div className="cart-total">
           <div>
             <div className="cart-total-details">
               <p>Sub Total</p>
@@ -33,15 +33,17 @@ function PlaceOrder() {
             <hr />
             <div className="cart-total-details">
               <p>Delivery Fee</p>
-              <p>${getTotalCartAmount()===0?0:2}</p>
+              <p>${getTotalCartAmount() === 0 ? 0 : 2}</p>
             </div>
             <hr />
             <div className="cart-total-details">
               <b>Total</b>
-              <b>${getTotalCartAmount()===0?0:getTotalCartAmount()+2}</b>
+              <b>
+                ${getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 2}
+              </b>
             </div>
           </div>
-          <button  >PROCEED TO PAYMENT</button>
+          <button>PROCEED TO PAYMENT</button>
         </div>
       </div>
     </form>
